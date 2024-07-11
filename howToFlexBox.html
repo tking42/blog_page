@@ -15,54 +15,62 @@
 </nav>
 
 <main class="container">
-  <div class="box">
+
+  <div class="columnLeft">
+
+    <div class="box">
       <h1>Step 1: Make a div a container in HTML</h1>
-    <div>
-      &lt;div class="Container"&gt; <br>
-          &lt;div class="Box"&gt;Box1&lt;/div&gt;<br>
-          &lt;div class="Box"&gt;Box2&lt;/div&gt;<br>
-          &lt;div class="Box"&gt;Box3&lt;/div&gt;<br>
-      &lt;/div&gt;
+      <div>
+        &lt;div class="Container"&gt; <br>
+        &lt;div class="Box"&gt;Box1&lt;/div&gt;<br>
+        &lt;div class="Box"&gt;Box2&lt;/div&gt;<br>
+        &lt;div class="Box"&gt;Box3&lt;/div&gt;<br>
+        &lt;/div&gt;
+      </div>
     </div>
-  </div>
 
-  <div class="box">
-    <h1>Step 2: Define a container as a flexbox</h1>
-    <div>
+      <div class="box">
+        <h1>Step 2: Define a container as a flexbox</h1>
+        <div>
+          .container { <br>
+          display: flex; <br>
+          }
+        </div>
+      </div>
+
+    <div class="box">
+      <h1>Step 3: Set flex container (default is row)</h1>
+      <div>
         .container { <br>
-            display: flex; <br>
+        display: flex; <br>
+        flex-direction: column; <br>
         }
+      </div>
     </div>
   </div>
 
-  <div class="box">
-    <h1>Step 3: Set flex container (default is row)</h1>
-    <div>
-      .container { <br>
-      display: flex; <br>
-      flex-direction: column; <br>
-      }
-    </div>
-  </div>
+  <div class="columnRight">
 
-  <div class="box">
-    <h1>Step 4: Add flex properties eg. justify-content and align-content</h1>
-    <div>
-      .container { <br>
-      display: flex; <br>
-      flex-direction: column; <br>
-      justify-content: space-evenly; <br>
-      align-items: center; <br>
-      }
+    <div class="box">
+      <h1>Step 4: Add flex properties eg. justify-content and align-content</h1>
+      <div>
+        .container { <br>
+        display: flex; <br>
+        flex-direction: column; <br>
+        justify-content: space-evenly; <br>
+        align-items: center; <br>
+        }
+      </div>
     </div>
-  </div>
 
-  <div class="box">
-    <h1>Other Properties:</h1>
-    <div>
-      Other properties include flex-wrap, gap, and flex-grow. Each property manipulates the alignment of the contents of the container
-      along the main and cross axis of flexbox.
+    <div class="box">
+      <h1>Other Properties:</h1>
+      <div>
+        Other properties include flex-wrap, gap, and flex-grow. Each property manipulates the alignment of the contents of the container
+        along the main and cross axis of flexbox.
+      </div>
     </div>
+
   </div>
 </main>
 

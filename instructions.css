@@ -1,13 +1,10 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
+    box-sizing: border-box;
     margin: 0;
     background-color: #fdedec;
     font-family: "Barlow", sans-serif;
     letter-spacing: 0.2rem;
-    color: #272C26;
+    color: black;
 }
 
 nav {
@@ -16,8 +13,14 @@ nav {
     flex-direction: column;
 }
 
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 nav h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 0;
     letter-spacing: 0.5rem;
@@ -30,31 +33,35 @@ nav h3 {
 }
 
 .container {
-    border: #272C26 solid 1px;
-    width: 95vw;
-    height: auto;
-    margin: 2.5vw;
     display: flex;
+    margin: 0 5rem;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     row-gap: 1rem;
 }
 
 .box {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 2rem;
+    border: solid black 1px;
+    border-radius: 5%;
+    background-color: white;
+    padding: 2rem;
 }
 
 .box h1 {
     font-family: "Rubik Mono One", monospace;
     text-transform: uppercase;
     font-size: 1rem;
+    color: #ba1a1a;
 }
 
-.box p {
-    font-size: 0.8rem;
+.box div {
+
 }
+
 
 .box a {
     color: #272C26;
@@ -89,7 +96,11 @@ footer p {
     color: #272C26;
 }
 
-
+footer a:hover {
+    color: blue;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 
 @media screen and (min-width: 640px) {
 
@@ -112,14 +123,20 @@ footer p {
         font-size: 2rem;
     }
 
+
     .container {
-        height: auto;
-        display: flex;
+        padding: 0 2rem;
         flex-direction: row;
-        justify-content: center;
     }
 
-    .box {
-        width: 45%;
+    .columnLeft {
+        flex: 1;
     }
+
+    .columnRight {
+        flex: 1;
+    }
+
+
+}
 

@@ -1,13 +1,11 @@
-* {
-    box-sizing: border-box;
-}
 
 body {
+    box-sizing: border-box;
     margin: 0;
     background-color: #fdedec;
     font-family: "Barlow", sans-serif;
     letter-spacing: 0.2rem;
-    color: #272C26;
+    color: black;
 }
 
 nav {
@@ -30,27 +28,46 @@ nav h3 {
 }
 
 .container {
-    border: #272C26 solid 1px;
-    width: 95vw;
     height: auto;
     margin: 2.5vw;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     row-gap: 3rem;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
 .box {
+    border: solid black 1px;
+    border-radius: 5%;
+    background-color: white;
+    margin: 2rem;
+    width: 18rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 50%;
+    justify-content: center;
+}
+
+
+img {
+    display: block;
+    width: 15rem;
+    max-height: 15rem;
 }
 
 .box h1 {
     font-family: "Rubik Mono One", monospace;
     text-transform: uppercase;
     font-size: 1rem;
+    color: #ba1a1a;
 }
 
 .box p {
@@ -86,14 +103,23 @@ footer p {
     color: #272C26;
 }
 
+.icons a:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
 
+.box a:hover {
+    color: blue;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 
 @media screen and (min-width: 640px) {
 
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         margin: 2rem;
     }
@@ -109,11 +135,35 @@ footer p {
     }
 
     .container {
-        height: auto;
+        align-items: normal;
+        flex-direction: row;
+        margin: 3rem;
+        justify-content: center;
     }
 
-    .box {
-        width: 33%;
+    .columnLeft {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .columnCenter {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .columnRight {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
     }
 
 }
